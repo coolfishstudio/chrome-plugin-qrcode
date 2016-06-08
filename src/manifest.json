@@ -1,0 +1,27 @@
+{  
+  "manifest_version": 2,
+  "name": "Qrcode",  
+  "version": "0.0.1",  
+  "author": "Yves",
+  "description": "个人使用的chrome浏览器 转二维码插件。",  
+  "permissions": [
+    "contextMenus",
+    "tabs"
+  ],
+  "content_scripts": [{
+    "matches": ["*://*/*"],
+    "css": [
+      "/public/css/popup.css"
+    ],
+    "js": [
+      "/public/js/jquery.min.js", 
+      "/public/js/jquery.qrcode.min.js", 
+      "/public/js/popup.js"
+    ]
+  }],
+  "browser_action": {  
+    "default_icon": "icon.png" ,
+    "default_title": "生成二维码",
+    "default_popup": "popup.html"
+  }  
+} 
